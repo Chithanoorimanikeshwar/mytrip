@@ -1,0 +1,48 @@
+<div class="container border">
+    <div class="row justify-content-center">
+        <h3 class="col-12 align-center w-auto">Online Registeration</h3>
+    </div>
+    <div class="row mt-2 border p-2">
+        <div class="col-md-3">
+            <strong >Passenger Details</strong><br>
+           <span class="text-info">Username:</span> <span class="mx-1">{{userDetails.username}}</span><br>
+           <span class="text-info">Email:</span><span class="mx-1">{{userDetails.email}}</span><br>
+           <span class="text-info">Mobile No:</span><span class="mx-1">{{userDetails.mobileNo}}</span><br>
+
+            
+
+        </div>
+        <div class="col-md-3">
+            <strong>Ticket Id:</strong><span class="mx-1">{{userDetails.id}}</span><br>
+            
+        </div>
+        <div class="col-md-3">
+            <strong class="me-1">Seat No</strong>
+            (<span  *ngFor="let seat of seatNumber">
+                {{seat.seat}},
+        </span>)
+        </div>
+        <div class="col-md-3">
+            <strong>Total Fare</strong>
+            <span class="mx-1">{{netFare}}</span>
+        </div>
+    </div>
+    <div class="row border p-2 mt-2">
+        <div class="col">
+            <strong>Bus Name</strong>
+            <p>{{busDetails.bus}}</p>
+        </div>
+        <div class="col">
+            <strong>Reporting Time</strong>
+            <p>5:30</p>
+        </div>
+        <div class="col">
+            <strong>Departure Time</strong>
+            <p>{{busDetails.dept_time}}</p>
+        </div>
+    </div>
+</div>
+<div class="row justify-content-center">
+<p class="text-danger col-12 w-auto">** Please bring this copy to ticket counter to collect your ticket</p>
+
+</div>

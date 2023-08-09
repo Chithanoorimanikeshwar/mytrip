@@ -1,0 +1,28 @@
+<div class="my-3">
+    <h3>Summary</h3>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Seats</th>
+            <th scope="col">Fare</th>
+            <th scope="col">Class</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let seat of seatsSummary,let i=index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{seat.seat}}</td>
+            <td>{{seat.fare}}</td>
+            <td>{{seat.class}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table">
+        <tr>
+            <td ><strong>Total:{{totalAmount}}</strong></td>
+        </tr>
+      </table>
+      <button class="btn btn-primary "style="width:100%" (click)="buttonClicked()">{{buttonStatus}}</button>
+      <button *ngIf="editButton" class="btn text-primary text-align-center" style="width: 100%;">Edit seats</button>
+</div>

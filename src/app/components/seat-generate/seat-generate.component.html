@@ -1,0 +1,18 @@
+<div class="container" class="row">
+    <app-review *ngIf="reviewComp" class="display-4 col-md-6 col-12"></app-review>
+
+
+
+    <app-seats class="col-md-6 col-12" *ngIf="!reviewComp"
+    [seatsPosition]="seatsPosition" 
+    [noOfSeats]="noOfSeats"
+    [activate]="activateChildSeat"
+    (select)="selectedSeat($event)"
+    ><p><strong class="fs-italic fs-4"style="font-family:monospace">Welocome To {{ busname }}</strong></p></app-seats>
+
+    
+    <app-summary class="col"
+     [selectedSeat]="selectedseat"
+     (buttonclicked)="summaryEvent($event)"
+     ></app-summary>
+</div>

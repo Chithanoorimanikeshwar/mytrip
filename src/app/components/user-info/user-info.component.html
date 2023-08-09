@@ -1,0 +1,35 @@
+<form #f="ngForm" ngForm (ngSubmit)="userFormSubmitted(f.form.value)" >
+
+    <!------------------------username-------------------------- -->
+    <div class="mb-3">
+        <label for="exampleInputname1" class="form-label">User name</label>
+        <input type="text" class="form-control" id="exampleInputname1" aria-describedby="emailHelp" name="username" ngModel #username="ngModel" required>
+      </div>
+      <div *ngIf="(username.touched || f.submitted) && username.errors && username.errors['required']" class="text-danger">
+        please enter this field
+      </div>
+      <!-- --------------------email is------------------------------ -->
+
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" ngModel name="email" #email="ngModel" required email/>
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div *ngIf="(email.touched || f.submitted) && email.errors && email.errors['required']" class="text-danger">
+      please enter this field
+    </div>
+    <div *ngIf="email.errors && email.errors['email'] && (email.touched || f.submitted)" class="text-danger">
+      please enter an valid email
+    </div>
+    <!-- ----------------------------------mobile no---------------------------- -->
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Mobile number</label>
+      <input type="number" class="form-control" id="exampleInputPassword1" ngModel name="mobile_number" #mobile="ngModel" required/>
+    </div>
+    <div class="text-danger" *ngIf="mobile.errors && mobile.errors['required'] && (mobile.touched || f.submitted)">
+      please enter this field
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Submit</button>
+  </form>

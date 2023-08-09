@@ -1,0 +1,33 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Bus Name</th>
+        <th scope="col">Dept Time</th>
+        <th scope="col">Coach Type</th>
+        <th scope="col">Seats AVailable</th>
+        <th scope="col">Fare</th>
+        <th scope="col">Book Now</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- <tr *ngFor="let bus of busList">
+        <th scope="row">{{bus.id}}</th>
+        <td>{{bus.bus}}</td>
+        <td>{{bus.dept_time}}</td>
+        <td>{{bus.coach}}</td>
+        <td>{{bus.seatsAvailable}}</td>
+        <td>{{bus.Fare}}</td>
+      </tr> -->
+      <tr *ngFor="let bus of busList">
+        <td>{{ bus.id }}</td>
+        <td>{{ bus.bus }}</td>
+        <td>{{ bus.dept_time }}</td>
+        <td>{{ bus.coach }}</td>
+        <td >{{ bus.seatsAvailable }}</td>
+        <td>{{ bus.Fare }}</td>
+        <td><button [ngClass]="checkSeats(bus.seatsAvailable)?'btn btn-outline-info':'btn btn-outline-secondary disabled'" (click)="bookTicket(bus)">book now</button></td>
+      </tr>
+        <span *ngIf="loading" class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+    </tbody>
+  </table>

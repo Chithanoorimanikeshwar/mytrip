@@ -1,0 +1,20 @@
+ <form [formGroup]="userform" (ngSubmit)="formSubmit()" >   
+    <div class="row g-3 mb-4">
+        <div class="col">
+            <label for="formGroupExampleInput" class="form-label">Leaving From</label>
+            <input type="text" class="form-control" placeholder="Pick up" aria-label="First name" formControlName="pickup">
+        </div>
+        <div class="col">
+             <label for="formGroupExampleInput" class="form-label">Going To</label>
+            <input type="text" class="form-control" placeholder="drop " aria-label="Last name" formControlName="drop">
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Departing On</label>
+        <input type="date" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder" formControlName="date">
+    </div>
+    <button class="btn btn-primary" type="submit" [disabled]="userform.invalid">
+        <span *ngIf="loading" class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+       submit
+    </button>
+</form>

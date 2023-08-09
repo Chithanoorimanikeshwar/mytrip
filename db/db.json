@@ -1,0 +1,63 @@
+{
+  "userdata": [
+  ],
+  "tirupati": [
+    {
+      "id": "1",
+      "bus": "TSRTC BUSES",
+      "dept_time": "19:33",
+      "coach": "sleeper",
+      "seatsAvailable": 6,
+      "seatsPosition": [
+        "C12",
+        "C13",
+        "C21",
+        "C22",
+        "C33"
+      ],
+      "Fare": 600
+    },
+    {
+      "id": "2",
+      "bus": "Sri Krishna Travels",
+      "dept_time": "18:33",
+      "coach": "ac/sleeper",
+      "seatsAvailable": 6,
+      "seatsPosition": [
+        "C12",
+        "C13",
+        "C21",
+        "C22",
+        "C33",
+        "C44"
+      ],
+      "Fare": 1500
+    }
+  ],
+  "vamulawada": [
+    {
+      "id": "1",
+      "bus": "TSRTC-7412",
+      "dept_time": "18:33",
+      "coach": "Non-ac/sleeper",
+      "seatsAvailable": 0,
+      "seatsPosition": [],
+      "Fare": 299
+    },
+    {
+      "id": "2",
+      "bus": "TSRTC",
+      "dept_time": "01:33",
+      "coach": "Non-ac/sleeper",
+      "seatsAvailable": 5,
+      "seatsPosition": [
+        "C12",
+        "C13",
+        "C21",
+        "C22",
+        "C33"
+      ],
+      "Fare": 299
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+<div class="m-4 p-3 bg-success rounded-2">
+    <h3>Journey Details</h3>
+    <hr>
+    <p>Date & Time:{{DandT}}</p>
+    <p>{{couch}}</p>
+    <p>Seats No
+        (<span *ngFor="let seat of seatNO">
+                {{seat.seat}},
+        </span>)
+    </p>
+</div>
