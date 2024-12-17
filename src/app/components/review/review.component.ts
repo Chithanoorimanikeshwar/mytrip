@@ -19,7 +19,6 @@ constructor(
   this.seatNO=[];
 }
   ngOnInit(): void {
-    debugger
     this.store.select(UserInfo.getSearchData).subscribe({
       next:(res)=>{this.DandT=res.date}
     })
